@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;CallRail · Shared Message Translator&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>:root {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--cr-green: #00b28a; --cr-navy: #0d2340; --bg: #f8f9fa;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--surface: #ffffff; --border: #e2e5ea; --text: #1a1a2e;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); padding: 40px 20px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.container { max-width: 800px; margin: 0 auto; background: var(--surface); border-radius: 12px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.header { background: var(--cr-navy); color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.content { padding: 30px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.section { margin-bottom: 25px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>label { display: block; font-weight: 700; font-size: 12px; text-transform: uppercase; color: var(--cr-green); margin-bottom: 8px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>textarea, select, input { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; margin-bottom: 10px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn { background: var(--cr-green); color: white; border: none; padding: 15px; width: 100%; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 16px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn:hover { background: #009175; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.output-box { display: none; margin-top: 20px; padding: 20px; background: #f4f5f7; border-radius: 8px; border-left: 4px solid var(--cr-green); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.instruction { font-size: 13px; color: #64748b; margin-bottom: 15px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;strong&gt;CallRail · Messaging Optimizer&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span style="font-size: 12px; opacity: 0.7;"&gt;V1.0 - Team Edition&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;1. Source Copy&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;textarea id="source" placeholder="Paste your raw draft or technical notes here..."&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;2. Audience &amp; Context&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;select id="audience"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;SMB Owner&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;Agency Marketer&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;Multi-Location Operator&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;select id="channel"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;Paid Search Ad&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;Email Nurture&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;Website Headline&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="btn" onclick="generatePrompt()"&gt;Prepare AI Translation Prompt&lt;/button&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="output" class="output-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;Step 3: Copy this into Gemini or Claude&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="instruction"&gt;Since this tool is gated for security, copy the prompt below and paste it into your AI of choice to get a 100% brand-compliant rewrite.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;textarea id="promptOut" style="height: 200px; font-family: monospace; font-size: 12px;" readonly&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="btn" style="background: var(--cr-navy);" onclick="copyText()"&gt;Copy Prompt to Clipboard&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function generatePrompt() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const source = document.getElementById('source').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const audience = document.getElementById('audience').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const channel = document.getElementById('channel').value;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const fullPrompt = `Translate this into CallRail Brand Voice:</p>
+<p class="p1"><span class="Apple-converted-space">            </span>SOURCE: "${source}"</p>
+<p class="p1"><span class="Apple-converted-space">            </span>AUDIENCE: ${audience}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>CHANNEL: ${channel}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>STRICT RULES:</p>
+<p class="p1"><span class="Apple-converted-space">            </span>- No banned words: optimize, leverage, unlock, streamline, solution.</p>
+<p class="p1"><span class="Apple-converted-space">            </span>- 9th grade reading level.<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>- Lead with outcomes (Make money, save money, save time).</p>
+<p class="p1"><span class="Apple-converted-space">            </span>- Sentence case only.</p>
+<p class="p1"><span class="Apple-converted-space">            </span>- Customer is the hero; CallRail is the guide.`;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('promptOut').value = fullPrompt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('output').style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function copyText() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const copyText = document.getElementById("promptOut");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>copyText.select();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.execCommand("copy");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>alert("Prompt copied! Paste this into Gemini/Claude to finish.");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
